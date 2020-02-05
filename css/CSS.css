@@ -1,0 +1,76 @@
+ .grid {
+        display: grid;
+        grid-template-areas: 
+    '. . hx7 hx7 . .'
+    '. hx6 hx6 hx5 hx5 .'
+    '. . hx4 hx4 . .'
+    '. hx3 hx3 hx2 hx2 .'
+    '. . hx1 hx1 . .'
+    ;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    height:100vh;
+    width:100vw;
+    }
+
+
+#hexagon {
+    width: 100px;
+    height: 55px;
+    background: #fc5e5e;
+    position: relative;
+    margin: 10px auto;
+}
+
+#hexagon:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid #fc5e5e;
+}
+
+#hexagon:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid #fc5e5e;
+}
+
+#hexagon7{
+grid-area: hx7;
+}
+
+#hexagon6{
+    grid-area: hx6;
+}
+
+#hexagon5{
+    grid-area: hx5;
+}
+
+#hexagon4{
+    grid-area: hx4;
+}
+
+#hexagon3{
+    grid-area: hx3;
+}
+
+#hexagon2{
+    grid-area: hx2;
+}
+
+#hexagon1{
+    grid-area: hx1;
+}
