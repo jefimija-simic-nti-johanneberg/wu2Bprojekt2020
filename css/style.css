@@ -1,0 +1,608 @@
+
+
+*{
+    color: white;
+}
+
+body {
+    font-family: 'M PLUS 1p', sans-serif;
+    background:rgb(9, 66, 47);
+    margin:0;
+    text-decoration: none;
+    
+    }
+
+/* CSS för start-mobil-startsida */
+
+    .grid {
+        display: grid;
+        grid-template-areas: 
+    "hd"
+    "sb"
+    "art"
+    "art2"
+    "art3"
+    "ft"
+    ;
+    height: 160vh;
+    width: 100vw;
+    grid-template-rows: 1fr 3fr 3fr 3fr 3fr 1fr;
+    grid-template-columns:1fr;
+    padding: 0;
+    margin:0;
+
+    }
+
+
+    /*Slideshow*/
+
+
+
+    .slidebild{
+        width: 100%;
+    }
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+
+
+    .slideshow-container {
+    margin: auto;
+    }
+
+    .slideshowbox{
+        grid-area: sb;
+
+    }
+
+    .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+
+    .active {
+    background-color: #717171;
+    }
+
+
+    .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+
+    /*meny*/
+    .menu{
+        grid-area: nv;
+        width: 320px;
+        height: 300px;
+        text-align: center;
+        display: block;
+        font-size: 1.5rem;
+        background:rgb(13, 150, 150);
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .menu{
+        height: 50vh;
+        width: 100vw;
+
+        position: fixed;
+        top: -50vh;
+        left: 0;
+        transition: top 0.3s;
+
+        z-index: 10;
+        opacity: 10;
+    }
+
+    .menu-button{
+        cursor:pointer;
+        display:inline;
+        size: 2rem;
+        position: left;
+    }
+
+    .menu-button i.material-icons{
+        font-size: 2.5rem;
+        top:2vh;
+        position: fixed;
+        left: 2vw;
+    }
+
+    .show{
+        top: 0;
+    }
+
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: clear;
+        display: none;
+        z-index: 5;
+    }
+
+    .fade-layer.visible{
+        display: block;
+    }
+
+    .menu ul{
+        text-align: center;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+
+
+
+    .menu ul > a >li:hover{
+        font-size: 2rem;
+        color: white;
+        transition: all 0.2s ease;
+    }
+
+    .menu ul > a{
+        text-decoration: none;
+    }
+
+    /*grids och innehåll*/
+
+    .header{
+        grid-area: hd;
+        text-align: center;
+        font-size: 1.5rem;
+        height: 50px;
+        color: white;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .h1{
+        color:white;
+        font-size:1rem;
+        text-decoration: none;
+        text-shadow: 1px 1px black;
+    }
+
+    .h2{
+        color:white;
+        font-size:3rem;
+        text-decoration: none;
+        text-shadow: 1px 1px black;
+    }
+
+
+
+    .article1{
+        grid-area:art;
+        text-align: center;
+        color: white;
+        padding:20px;
+
+    }
+
+    .article2{
+        grid-area:art2;
+        background:rgb(156, 72, 15);
+        padding:10px; 
+        background-image: url('../img/olja.jpg');
+        background-size: cover;
+        
+    }
+
+    .article2 > a{
+        text-decoration: none;
+    }
+
+    .article3 > a{
+        text-decoration: none;
+    }
+
+
+
+    .article3{
+        grid-area:art3;
+        background:rgb(8, 3, 26);
+        padding:10px; 
+        background-image: url('../img/blixt.jpg');
+        background-size: cover;
+        text-decoration: none;
+
+    }
+
+
+    .footer{
+        grid-area: ft;
+    }
+
+    .footertext1{
+        margin:10px;
+    }
+    .footertext2{
+        margin: 10px;
+    }
+    /* CSS för undersida (photography) */
+    .gridGallery {
+        display: grid;
+        grid-template-areas: 
+    "hd"
+    "txtp"
+    "g1"
+    "g2"
+    "g3"
+    "g4"
+    "g5"
+    "g6"
+    "ft"
+    ;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows:1fr 2fr 2fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-columns:1fr;
+    padding:0;
+    margin:0;
+    grid-gap: 20px;
+    }
+
+    .bildtext {
+        color: black;
+    }
+
+    .textP{
+        grid-area: txtp;
+        padding: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .gallery1{
+        grid-area: g1;
+
+    }
+
+    .gallery2{
+        grid-area: g2;
+
+    }
+
+    .gallery3{
+        grid-area: g3;
+
+    }
+
+    .gallery4{
+        grid-area: g4;
+
+    }
+
+    .gallery5{
+        grid-area: g5;
+
+    }
+
+    .gallery6{
+        grid-area: g6;
+
+    }
+
+    .allimage{
+        align-content: center;
+        display: block;
+        background: white;
+        text-align: center;
+    }
+
+    .galleribild{
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2vh;
+
+    }
+
+/*CSS för undersida (about me)*/
+.gridaboutme{
+    display: grid;
+    grid-template-areas: 
+"hd"
+"jb"
+"tam"
+"ft"
+;
+height: 100vh;
+width: 100vw;
+grid-template-rows:1fr 2fr 3fr 1fr;
+grid-template-columns:1fr;
+padding:0;
+margin:0;
+grid-gap: 20px;
+}
+.jejabild{
+    grid-area: jb;
+    background: white;
+}
+.textaboutme{
+    grid-area: tam;
+    background: white;
+    padding: 20px;
+}
+
+.titlejeja{
+    color: black;
+    font-size: 2rem;
+}
+
+.textjeja{
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.profilbild{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+/*css undersida filosofi*/
+.gridphilosophy{
+    display: grid;
+    grid-template-areas: 
+"hd"
+"hb"
+"f1"
+"nb"
+"f2"
+"ft"
+;
+height: 100vh;
+width: 100vw;
+grid-template-rows:1fr 2fr 2fr 2fr 2fr 1fr;
+grid-template-columns:1fr;
+padding:0;
+margin:0;
+grid-gap: 20px;
+}
+
+.himmelbild{
+    grid-area: hb;
+    background: white;
+}
+
+.filosofi1{
+    grid-area: f1;
+    background: white;
+    padding: 20px;
+}
+
+.neonbild{
+    grid-area: nb;
+    background: white;
+}
+
+.filosofi2{
+    grid-area: f2;
+    background:white;
+    padding:20px;
+}
+
+.himmel{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+.neon{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+.filosofitext{
+    color: black;
+    text-align: center;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 426px){
+/*startsida*/
+        .grid {
+            display: grid;
+            grid-template-areas: 
+        "hd hd"
+        "sb  sb"
+        "art  art"
+        "art3  art2"
+        "am ph"
+        "ft  ft"
+        ;
+        height: 100vh;
+        width: 100vw;
+        grid-template-rows: 1fr 2fr 2fr 2fr 2fr 1fr;
+        grid-template-columns:1fr 1fr;
+        grid-gap: 50px;
+        margin:0;
+        padding: 0;
+
+        
+        }
+
+    .header{
+        font-size: 3rem;
+    }
+
+
+   .slidebild{
+        object-fit: cover;
+        width: 80vw;
+        height: 60vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .article1{
+        display: block;
+        margin: 70px;
+        font-size: 2rem;
+  
+    }
+
+    .article2{
+        height: 60vh;
+        margin-right: 50px;
+    }
+
+    .article3{
+        height: 60vh;
+        margin-left: 50px;
+    }
+
+    
+
+
+    h2:hover{
+            font-size: 4rem;
+            transition: all 0.2s ease;
+        }
+
+    /* CSS för undersida (photography/paintings) */
+    .gridGallery {
+        display: grid;
+        grid-template-areas: 
+    "hd hd hd"
+    "txtp txtp txtp"
+    "g1 g2 g3"
+    "g4 g5 g6"
+    "ft ft ft"
+    ;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows:1fr 2fr 2fr 2fr 1fr;
+    grid-template-columns:1fr 1fr 1fr;
+    padding:0;
+    margin:0;
+    grid-gap: 20px;
+    }
+    
+    
+    .textP{
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: block;
+    }
+    
+    .bildtext {
+        font-size: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+        
+    .galleribild{
+        display: block;
+        margin-top: 2vh;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+/*undersida about me*/
+    .gridaboutme{
+        display: grid;
+        grid-template-areas: 
+    "hd hd"
+    "jb tam"
+    "ft ft"
+    ;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows:1fr 2fr 1fr;
+    grid-template-columns:1fr 1fr;
+    padding:0;
+    margin:0;
+    grid-gap: 20px;
+    }
+    .jejabild{
+        grid-area: jb;
+        background: white;
+    }
+    .textaboutme{
+        grid-area: tam;
+        background: white;
+        padding: 20px;
+    }
+    
+    .titlejeja{
+        color: black;
+        font-size: 2rem;
+    }
+    
+    .textjeja{
+        color: black;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .profilbild{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    /* CSS undersida filosofi*/
+    .gridphilosophy{
+        display: grid;
+        grid-template-areas: 
+    "hd hd"
+    "hb f1"
+    "f2 nb"
+    "ft ft"
+    ;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows:1fr 2fr 2fr 1fr;
+    grid-template-columns:1fr 1fr;
+    padding:0;
+    margin:0;
+    grid-gap: 20px;
+    }
+
+    .litentext{
+        font-size: 1.5rem;
+    }
+
+    .filosofitext{
+        padding: 50px;
+    }
